@@ -1,0 +1,55 @@
+{
+    "name": "kenjis/codeigniter-ss-twig",
+    "type": "library",
+    "description": "A Simple and Secure Twig integration for CodeIgniter",
+    "keywords": [
+        "codeigniter",
+        "codeigniter4",
+        "twig"
+    ],
+    "homepage": "https://github.com/kenjis/codeigniter-ss-twig",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kenji Suzuki",
+            "homepage": "https://github.com/kenjis"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "twig/twig": "^3.4.3"
+    },
+    "require-dev": {
+        "codeigniter4/framework": "^4.2.11",
+        "phpunit/phpunit": "^9.5",
+        "codeigniter4/devkit": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "Kenjis\\CI4Twig\\": "src/CI4Twig/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Kenjis\\CI4Twig\\": "tests/CI4Twig/"
+        }
+    },
+    "scripts": {
+        "analyze": [
+            "bash -c \"XDEBUG_MODE=off phpstan analyse\"",
+            "psalm",
+            "rector process --dry-run"
+        ],
+        "sa": "@analyze",
+        "cs": "php-cs-fixer fix --ansi --verbose --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix --ansi --verbose --diff",
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
