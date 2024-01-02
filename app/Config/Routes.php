@@ -112,6 +112,7 @@ $routes->get('submissions/final/(:any)/(:any)','Submissions::the_final/$1/$2',['
 $routes->post('/submissions/view_code', 'Submissions::view_code');
 $routes->post('/submissions/select', 'Submissions::select');
 $routes->get('/submissions/all_excel/(:any)/(:any)', 'Submissions::all_excel/$1/$2');
+$routes->get('/submissions/all_excel', 'Submissions::all_excel');
 $routes->get('/submissions/final_excel/(:any)/(:any)', 'Submissions::final_excel/$1/$2');
 $routes->get('/submissions/final_excel', 'Submissions::final_excel');
 $routes->get('submissions/download_file/(:any)/(:num)/(:num)/(:num)','Submissions::download_file/$1/$2/$3/$4');
