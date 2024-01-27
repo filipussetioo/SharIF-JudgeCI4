@@ -23,7 +23,7 @@
 				<p>
 					<label for="form_password_2">New Password, Again:</label><br/>
 					<input id="form_password_2" type="password" name="password_again" required="required" pattern=".{6,200}" title="The Password Confirmation field must be at least 6 characters in length" class="sharif_input"/>
-					<div class="shj_error"><?= $validationError->hasError('password_again') ? $validationError->getError('password'): ''?></div>
+					<div class="shj_error"><?= $validationError->hasError('password_again') ? $validationError->getError('password_again'): ''?></div>
 				</p>
 				<?php if ($reset): ?>
 					<div class="shj_ok">Login with your new password!</div>

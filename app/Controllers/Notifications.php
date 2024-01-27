@@ -16,7 +16,6 @@ class Notifications extends BaseController
 {
 
 	private $notif_edit;
-	protected $session;
 	protected $validation;
 	protected $notifications_model;
 	protected $assignment_model;
@@ -27,7 +26,6 @@ class Notifications extends BaseController
 
 	public function __construct()
 	{
-		$this->session = session();
 		$this->validation = \Config\Services::validation();
 		$this->notifications_model = new NotificationsModel();
 		$this->assignment_model = new AssignmentModel();

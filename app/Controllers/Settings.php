@@ -19,7 +19,6 @@ class Settings extends BaseController
 
 	private $form_status;
 	private $errors;
-	protected $session;
 	protected $user;
 	protected $settings_model;
 	protected $assignment_model;
@@ -32,7 +31,6 @@ class Settings extends BaseController
 
 	public function __construct()
 	{
-		$this->session = session();
 		$this->user = new User();
 		$this->settings_model = new SettingsModel();
 		$this->assignment_model = new AssignmentModel();

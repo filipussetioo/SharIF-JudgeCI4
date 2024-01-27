@@ -119,8 +119,8 @@ class Submit extends BaseController
 
 	public function index()
 	{
-		$this->validation->setRule('problem', 'problem', 'required|integer|greater_than[0]', array('greater_than' => 'Select a %s.'));
-		$this->validation->setRule('language', 'language', 'required|_check_language', array('_check_language' => 'Select a valid %s.'));
+		$this->validation->setRule('problem', 'problem', 'required|integer|greater_than[0]', array('greater_than' => 'Select a {field}.'));
+		$this->validation->setRule('language', 'language', 'required|_check_language', array('_check_language' => 'Select a valid {field}.'));
 		if($this->request->is('post')){
 			if ($this->validation->withRequest($this->request)->run())
 			{

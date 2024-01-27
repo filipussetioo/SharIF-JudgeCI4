@@ -17,7 +17,6 @@ class Profile extends BaseController
 
 	private $form_status;
 	private $edit_username;
-	protected $session;
 	protected $user;
 	protected $userModel;
 	protected $validation;
@@ -31,7 +30,6 @@ class Profile extends BaseController
 
 	public function __construct()
 	{
-		$this->session = session();
 		$this->user_model = new UserModel();
 		$this->user = new User();
 		$this->validation = \Config\Services::validation();

@@ -16,7 +16,6 @@ class Problems extends BaseController
 {
 
 	private $all_assignments;
-	protected $session;
 	protected $assignment_model;
 	protected $user;
 	protected $settings_model;
@@ -28,7 +27,6 @@ class Problems extends BaseController
 
 	public function __construct()
 	{
-		$this->session = session();
 		$this->assignment_model = new AssignmentModel();
 		$this->user = new User();
 		$this->settings_model = new SettingsModel();
