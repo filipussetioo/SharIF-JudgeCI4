@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'db',
         'username' => 'root',
         'password' => '',
-        'database' => 'pndevworks_project',
+        'database' => '',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => 'shj_',
         'pConnect' => false,
