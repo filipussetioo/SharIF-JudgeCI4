@@ -48,13 +48,13 @@ For running SharIF Judge, a Linux server with following requirements is needed:
   1. Download the latest release from [download page](https://github.com/ifunpar/Sharif-Judge/releases) and unpack downloaded file in your public html directory.
   2. **[Optional]** Move folders `system` and `application` somewhere outside your public directory. Then save their full path in `index.php` file (`$system_path` and `$application_folder` variables).
   3. Create a MySql or PostgreSql database for SharIF Judge. Do not install any database connection package for C/C++, Java or Python.
-  4. Copy `application/config/database.example.php` to `application/config/database.php` and update the file according to your database configuration.
-  4. Copy `application/config/secrets.example.php` to `application/config/secrets.php` and update the file according to your RADIUS and SMTP configuration.
-  5. Make `application/cache/Twig` writable by php.
-  6. Open the main page of SharIF Judge in a web browser and follow the installation process.
-  7. Log in with your admin account.
-  8. **[IMPORTANT]** Move folders `tester` and `assignments` somewhere outside your public directory. Then save their full path in `Settings` page. **These two folders must be writable by PHP.** Submitted files will be stored in `assignments` folder. So it should be somewhere not publicly accessible.
-  9. **[IMPORTANT]** [Secure SharIF Judge](https://github.com/ifunpar/Sharif-Judge/blob/docs/v1.4/security.md)
+  4. Copy `app/Config/Secrets.example.php` to `app/Config/Secrets.php` and update the file according to your RADIUS and SMTP configuration.
+  5. Copy `env` to `.env` and update database and app URL
+  6. Make `writables` directory writable to PHP
+  7. Open the main page of SharIF Judge in a web browser and follow the installation process.
+  8. Log in with your admin account.
+  9. **[IMPORTANT]** Move folders `tester` and `assignments` somewhere outside your public directory. Then save their full path in `Settings` page. **These two folders must be writable by PHP.** Submitted files will be stored in `assignments` folder. So it should be somewhere not publicly accessible.
+  10. **[IMPORTANT]** [Secure SharIF Judge](https://github.com/ifunpar/Sharif-Judge/blob/docs/v1.4/security.md)
 
 ## After Installation
 
